@@ -1,4 +1,5 @@
 import os
+import csv
 import pandas as pd
 import re
 import time 
@@ -9,9 +10,10 @@ import urllib.request
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from fpdf import FPDF
 
 pagina_web = 'https://directoriosancionados.apps.funcionpublica.gob.mx/#'
-driver =webdriver.Chrome()
+driver = webdriver.Chrome()
 driver.get(pagina_web)
 
 
@@ -19,14 +21,6 @@ driver.get(pagina_web)
 WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "//select[@name='cfiltro']"))).click()
 
 WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "//select[@name='cfiltro']/option[4]"))).click()
-
-
-"""# Realizar la acción de "Enter" en el elemento de entrada de texto
-actions = ActionChains(driver)
-actions.move_to_element(input_element)
-actions.send_keys(Keys.ENTER)
-"""
-
 
 # Desplazar la página gradualmente y capturar elementos
 scroll_incremento = 200  # Incremento de desplazamiento en píxeles
@@ -43,50 +37,103 @@ while scrolled < 10:
 
 # Lista de nombres y clicks en detalles
 time.sleep(2)
-#titulos = driver.find_elements(By.XPATH, "//table[@class='z-depth-1 table']/tbody/tr/th")
+titulos = driver.find_elements(By.XPATH, "//table[@class='z-depth-1 table']/tbody/tr/th")
+expedientes = driver.find_elements(By.XPATH, "//table[@class='z-depth-1 table']/tbody/tr/td[@class='ng-star-inserted']")
+
+time.sleep(2)
 detalles = driver.find_elements(By.XPATH, "//tr[@class='ng-star-inserted']/td[4]/a")
-print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-print("SOY LA CANTIDAD DE DETALLES QUE HAY EN LA PRIMERA PAGINA")
-print(detalles)
-print(len(detalles))
 contador =1
+diccionario = {}
+
 for i in range(len(detalles)):
+    #Encontrar el elemento
     elemento = driver.execute_script("arguments[0].scrollIntoView();", detalles[i])
     time.sleep(3)
     detalles[i].click()
-    print("SOY EL NÚMERO DEL DETALLE AL QUE ESTAMOS INGRESANDO")
-    print(contador)
+    print("Archivo #:", i)
+
+    #CAPTURAR LOS DATOS EN LA TABLA
+    time.sleep(4) 
     nombres = driver.find_elements(By.XPATH, "//table[@class='table table-striped table-fit table-bordered table-hover']/tbody/tr/td/strong")
-    print("VOY A IMPRIMIR LA TABLA")
-    print(nombres)
-    print(len(nombres))
-    """for i in nombres:
-        i.text
-        print(i)"""
+    time.sleep(4) 
+    contenidos = driver.find_elements(By.XPATH, "//table[@class='table table-striped table-fit table-bordered table-hover']/tbody/tr/td/p")
+    
+    #CONVERTIR LOS ELEMENTOS WEB EN TEXTO
+    lista_nombres = [nombre.text for nombre in nombres]
+    lista_contenidos = [contenido.text for contenido in contenidos]
+    nombre = titulos[i].text
+    aux = expedientes[i].text
+    expediente = aux.replace("/", "-")
+
+    # Crear el DataFrame
+    df = pd.DataFrame({'Ficha técnica del infractor': lista_nombres, 'Datos': lista_contenidos})
+    df = df.set_index('Ficha técnica del infractor')
+    print(df)
+    df.to_excel(f'/Users/connectasimac/Documents/DATOS/CODIGO/codigoCONN/{nombre}-{expediente}-.xslx', index=True)
+
+        # Crear una clase personalizada basada en FPDF
+    class PDF(FPDF):
+        def header(self):
+            self.set_font('Arial', 'B', 12)
+            self.cell(0, 10, 'Ficha técnica del infractor', 0, 1, 'C')
+
+
+    # Crear una instancia del objeto PDF
+    pdf = PDF()
+    pdf.add_page()
+
+    # Configurar el ancho de las celdas y el tamaño de la fuente
+    cell_width = 100
+    font_size = 12
+
+    # Leer el DataFrame y agregar los datos al PDF
+    for index, row in df.iterrows():
+        for column in df.columns:
+            pdf.set_font('Arial', '', font_size)
+            content = str(row[column])
+            pdf.cell(cell_width, 10, content[:100], 1)  # Ajustar el contenido a la longitud de la celda
+        pdf.ln()
+
+    
+    # Guardar el archivo PDF
+    pdf.output(f'/Users/connectasimac/Documents/DATOS/CODIGO/codigoCONN/{nombre}-{expediente}.pdf')
+
+    print("Archivo PDF guardado exitosamente.")
+
+
+    close_button = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "//button[@class='p-ripple p-element ng-tns-c59-2 p-dialog-header-icon p-dialog-header-close p-link ng-star-inserted']")))
+    close_button.click()
+
+    #
+    #print(tabla_texto)
+    # Guardar los datos en un archivo CSV
+    
+    
+
+
+
+    """
+    for i in range(len(nombres)):
+            fila = nombres[i].text
+            contenido = contenidos[i].text
+
+            if fila in diccionario:
+                diccionario[fila].append(contenido)
+            else:
+                diccionario[fila] = [contenido]
+
+            print(diccionario)"""
+
+    
        
     #contenidos = driver.find_elements(By.XPATH, "//table[@class='table table-striped table-fit table-bordered table-hover']/tbody/tr/td/p")
    
    # print(len(contenidos))
-    #print(contenidos)
-    time.sleep(2) 
-    close = driver.find_elements(By.XPATH, "//button[@class='p-ripple p-element ng-tns-c59-2 p-dialog-header-icon p-dialog-header-close p-link ng-star-inserted']")
-    close.click()
-    #close_button = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "//button[@class='p-ripple p-element ng-tns-c59-2 p-dialog-header-icon p-dialog-header-close p-link ng-star-inserted']")))
-    #close_button.click()
-    time.sleep(2)  # Esperar 2 segundos después de cerrar la ventana emergente
-    contador += 1
+    #print(contenidos) 
+    
+    
 
-"""contador = 0
-for i in range(len(detalles)):
-    actions = ActionChains(driver)
-    driver.execute_script("arguments[0].scrollIntoView();", detalles[i])
-    uno = driver.find_element(By.XPATH, f"//tr[@class='ng-star-inserted']/td[4]/a[{i}]")
-    detalles[i].click()
-    time.sleep(3)
-    close_button = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "//button[@class='p-ripple p-element ng-tns-c59-2 p-dialog-header-icon p-dialog-header-close p-link ng-star-inserted']")))
-    close_button.click()
-    time.sleep(3)
-"""
+
 
 """
 
