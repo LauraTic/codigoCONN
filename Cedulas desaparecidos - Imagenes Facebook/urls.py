@@ -14,7 +14,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
-
 # Leer el archivo Excel
 df = pd.read_csv("/Users/datos-lc/Documents/Colecciones ongoing/Baja_california/lista_urls.csv")
 
