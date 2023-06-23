@@ -1,0 +1,271 @@
+1687541977108	geckodriver	INFO	Listening on 127.0.0.1:55687
+1687541977657	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "55688" "--r ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/8x/mhb95z856c56z5sdrrfg40140000gp/T/rust_mozprofilegBKFiY"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687541979732	Marionette	INFO	Marionette enabled
+1687541980545	Marionette	INFO	Listening on port 55699
+console.error: "Warning: unrecognized command line flag -remote-allow-hosts\n"
+Read port: 55699
+WebDriver BiDi listening on ws://127.0.0.1:55688
+2023-06-23 12:39:40.660 plugin-container[68204:11582560] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 12:39:40.660 plugin-container[68204:11582560] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-06-23 12:39:41.771 plugin-container[68204:11582560] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 12:39:41.771 plugin-container[68204:11582560] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-06-23 12:39:41.771 plugin-container[68204:11582558] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 12:39:41.771 plugin-container[68204:11582558] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1687541982266	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:55688/devtools/browser/f94be758-d531-44c5-81a8-5cd741776f6f
+console.error: ({})
+2023-06-23 17:39:47.820 plugin-container[68213:11582918] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 17:39:47.821 plugin-container[68213:11582918] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-06-23 17:39:47.828 plugin-container[68213:11582918] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 17:39:47.828 plugin-container[68213:11582918] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-06-23 17:39:47.828 plugin-container[68213:11582927] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 17:39:47.828 plugin-container[68213:11582927] nil host used in call to allowsAnyHTTPSCertificateForHost:
+console.error: ({})
+2023-06-23 17:39:52.200 plugin-container[68215:11583036] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 17:39:52.200 plugin-container[68215:11583036] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-06-23 17:39:52.203 plugin-container[68215:11583036] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 17:39:52.203 plugin-container[68215:11583036] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-06-23 17:39:52.204 plugin-container[68215:11583037] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 17:39:52.204 plugin-container[68215:11583037] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1687542013022	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rpjweb.srcei.cl."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rpjweb.srcei.cl."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rpjweb.srcei.cl."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rpjweb.srcei.cl."
+1687542578875	geckodriver	INFO	Listening on 127.0.0.1:55915
+1687542579375	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "55916" "--r ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/8x/mhb95z856c56z5sdrrfg40140000gp/T/rust_mozprofile2FtXoX"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687542579967	Marionette	INFO	Marionette enabled
+2023-06-23 12:49:40.348 plugin-container[68391:11587380] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 12:49:40.349 plugin-container[68391:11587380] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-06-23 12:49:40.353 plugin-container[68391:11587380] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 12:49:40.353 plugin-container[68391:11587380] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-06-23 12:49:40.353 plugin-container[68391:11587378] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 12:49:40.353 plugin-container[68391:11587378] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1687542580417	Marionette	INFO	Listening on port 55924
+console.error: "Warning: unrecognized command line flag -remote-allow-hosts\n"
+WebDriver BiDi listening on ws://127.0.0.1:55916
+Read port: 55924
+1687542580946	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:55916/devtools/browser/49014e9a-9496-4724-b440-43c3bda341ea
+console.error: ({})
+2023-06-23 17:49:44.981 plugin-container[68400:11587643] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 17:49:44.981 plugin-container[68400:11587643] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-06-23 17:49:44.986 plugin-container[68400:11587643] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 17:49:44.986 plugin-container[68400:11587643] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-06-23 17:49:44.986 plugin-container[68400:11587659] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 17:49:44.986 plugin-container[68400:11587659] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1687542597922	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.error: ({})
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rpjweb.srcei.cl."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rpjweb.srcei.cl."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rpjweb.srcei.cl."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rpjweb.srcei.cl."
+console.error: ({})
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rpjweb.srcei.cl."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rpjweb.srcei.cl."
+console.error: ({})
+1687542638461	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.sys.mjs:221:24
+TimedPromise@chrome://remote/content/marionette/sync.sys.mjs:205:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.sys.mjs:424:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:173:31
+1687543158064	geckodriver	INFO	Listening on 127.0.0.1:56201
+1687543158569	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "56202" "--r ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/8x/mhb95z856c56z5sdrrfg40140000gp/T/rust_mozprofile4N8HWP"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687543159098	Marionette	INFO	Marionette enabled
+1687543159191	Marionette	INFO	Listening on port 56210
+console.error: "Warning: unrecognized command line flag -remote-allow-hosts\n"
+2023-06-23 12:59:19.238 plugin-container[68543:11591306] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 12:59:19.239 plugin-container[68543:11591306] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-06-23 12:59:19.243 plugin-container[68543:11591306] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 12:59:19.243 plugin-container[68543:11591306] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-06-23 12:59:19.244 plugin-container[68543:11591309] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 12:59:19.244 plugin-container[68543:11591309] nil host used in call to allowsAnyHTTPSCertificateForHost:
+Read port: 56210
+WebDriver BiDi listening on ws://127.0.0.1:56202
+1687543159389	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:56202/devtools/browser/e5d9b29e-c968-4f9a-8e4c-3b8e9d470855
+console.error: ({})
+2023-06-23 17:59:23.579 plugin-container[68555:11591588] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 17:59:23.579 plugin-container[68555:11591588] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-06-23 17:59:23.583 plugin-container[68555:11591588] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 17:59:23.583 plugin-container[68555:11591588] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-06-23 17:59:23.583 plugin-container[68555:11591603] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 17:59:23.583 plugin-container[68555:11591603] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1687543176359	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.error: ({})
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rpjweb.srcei.cl."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rpjweb.srcei.cl."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rpjweb.srcei.cl."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rpjweb.srcei.cl."
+console.error: ({})
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rpjweb.srcei.cl."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rpjweb.srcei.cl."
+console.error: ({})
+1687543217065	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.sys.mjs:221:24
+TimedPromise@chrome://remote/content/marionette/sync.sys.mjs:205:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.sys.mjs:424:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:173:31
+console.error: (new TypeError("watcher.browserElement.browsingContext is null", "resource://devtools/server/actors/watcher/target-helpers/frame-helper.js", 193))
+console.error: (new TypeError("watcher.browserElement.browsingContext is null", "resource://devtools/server/actors/watcher/target-helpers/frame-helper.js", 193))
+console.error: (new TypeError("watcher.browserElement.browsingContext is null", "resource://devtools/server/actors/watcher/target-helpers/frame-helper.js", 193))
+1687543795136	geckodriver	INFO	Listening on 127.0.0.1:56502
+1687543795633	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "56503" "--r ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/8x/mhb95z856c56z5sdrrfg40140000gp/T/rust_mozprofileix5R6n"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687543804399	Marionette	INFO	Marionette enabled
+2023-06-23 13:10:04.810 plugin-container[68762:11597027] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 13:10:04.810 plugin-container[68762:11597027] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-06-23 13:10:04.815 plugin-container[68762:11597027] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 13:10:04.815 plugin-container[68762:11597027] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-06-23 13:10:04.815 plugin-container[68762:11597040] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 13:10:04.815 plugin-container[68762:11597040] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1687543804840	Marionette	INFO	Listening on port 56513
+console.error: "Warning: unrecognized command line flag -remote-allow-hosts\n"
+Read port: 56513
+WebDriver BiDi listening on ws://127.0.0.1:56503
+1687543808702	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:56503/devtools/browser/b09ea25b-8ea8-40d2-9897-418594643eed
+console.error: ({})
+console.error: ({})
+2023-06-23 18:10:18.771 plugin-container[68773:11597424] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 18:10:18.771 plugin-container[68773:11597424] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-06-23 18:10:18.775 plugin-container[68773:11597424] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 18:10:18.775 plugin-container[68773:11597424] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-06-23 18:10:18.776 plugin-container[68773:11597428] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 18:10:18.776 plugin-container[68773:11597428] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1687543832535	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.error: ({})
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rpjweb.srcei.cl."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rpjweb.srcei.cl."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rpjweb.srcei.cl."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rpjweb.srcei.cl."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rpjweb.srcei.cl."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rpjweb.srcei.cl."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rpjweb.srcei.cl."
+console.error: ({})
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rpjweb.srcei.cl."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rpjweb.srcei.cl."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rpjweb.srcei.cl."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rpjweb.srcei.cl."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rpjweb.srcei.cl."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rpjweb.srcei.cl."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rpjweb.srcei.cl."
+console.error: ({})
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rpjweb.srcei.cl."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rpjweb.srcei.cl."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rpjweb.srcei.cl."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rpjweb.srcei.cl."
+console.error: ({})
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rpjweb.srcei.cl."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rpjweb.srcei.cl."
+console.error: ({})
+1687543884201	geckodriver	INFO	Listening on 127.0.0.1:56704
+1687543884606	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "56705" "--r ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/8x/mhb95z856c56z5sdrrfg40140000gp/T/rust_mozprofilevYyqXr"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687543884940	Marionette	INFO	Marionette enabled
+2023-06-23 13:11:25.201 plugin-container[68797:11597998] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 13:11:25.202 plugin-container[68797:11597998] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-06-23 13:11:25.205 plugin-container[68797:11597998] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 13:11:25.205 plugin-container[68797:11597998] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-06-23 13:11:25.205 plugin-container[68797:11598000] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 13:11:25.205 plugin-container[68797:11598000] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1687543885698	Marionette	INFO	Listening on port 56712
+console.error: "Warning: unrecognized command line flag -remote-allow-hosts\n"
+Read port: 56712
+WebDriver BiDi listening on ws://127.0.0.1:56705
+1687543885935	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:56705/devtools/browser/c9197a76-0078-48c9-be7c-dc1593f57166
+console.error: ({})
+console.error: ({})
+2023-06-23 18:11:35.154 plugin-container[68806:11598300] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 18:11:35.154 plugin-container[68806:11598300] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-06-23 18:11:35.158 plugin-container[68806:11598300] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 18:11:35.158 plugin-container[68806:11598300] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-06-23 18:11:35.158 plugin-container[68806:11598319] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 18:11:35.158 plugin-container[68806:11598319] nil host used in call to allowsAnyHTTPSCertificateForHost:
+console.error: ({})
+1687543947729	Marionette	INFO	Stopped listening on port 56712
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1687543950578	Marionette	INFO	Stopped listening on port 56513
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1687543951923	Marionette	INFO	Stopped listening on port 56210
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: chrome://remote/content/marionette/cert.sys.mjs, line 51: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+!!! error running onStopped callback: TypeError: callback is not a function
+1687543952291	WebDriver BiDi	ERROR	Failed to stop protocol: [Exception... "Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]"  nsresult: "0x80040111 (NS_ERROR_NOT_AVAILABLE)"  location: "JS frame :: chrome://remote/content/marionette/cert.sys.mjs :: allowAllCerts.disable :: line 51"  data: no] Stack trace: allowAllCerts.disable()@cert.sys.mjs:51
+destroy()@Session.sys.mjs:207
+deleteSession()@WebDriverBiDi.sys.mjs:142
+stop()@WebDriverBiDi.sys.mjs:230
+1687543953257	Marionette	INFO	Stopped listening on port 55924
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+!!! error running onStopped callback: TypeError: callback is not a function
+console.error: (new Error("Data is not ready.", "resource://gre/modules/JSONFile.sys.mjs", 184))
+1687543954426	Marionette	INFO	Stopped listening on port 55699
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+!!! error running onStopped callback: TypeError: callback is not a function
+1687543960688	geckodriver	INFO	Listening on 127.0.0.1:56861
+1687543961252	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "56862" "--r ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/8x/mhb95z856c56z5sdrrfg40140000gp/T/rust_mozprofile6wLAGn"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687543963174	Marionette	INFO	Marionette enabled
+1687543963263	Marionette	INFO	Listening on port 56870
+console.error: "Warning: unrecognized command line flag -remote-allow-hosts\n"
+2023-06-23 13:12:43.312 plugin-container[68839:11599513] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 13:12:43.312 plugin-container[68839:11599513] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-06-23 13:12:43.315 plugin-container[68839:11599513] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 13:12:43.315 plugin-container[68839:11599513] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-06-23 13:12:43.315 plugin-container[68839:11599514] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 13:12:43.315 plugin-container[68839:11599514] nil host used in call to allowsAnyHTTPSCertificateForHost:
+WebDriver BiDi listening on ws://127.0.0.1:56862
+Read port: 56870
+Read port: 56870
+1687543967325	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.sys.mjs: "Error fetching region" (new AbortError("The operation was aborted. ", (void 0), 760))
+console.error: Region.sys.mjs: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.sys.mjs", 414))
+DevTools listening on ws://127.0.0.1:56862/devtools/browser/3759a29f-fb93-46d2-a598-6985426dc740
+console.error: (new TypeError("this._searchProviderInfo is null", "resource:///modules/SearchSERPTelemetry.sys.mjs", 638))
+console.error: ({})
+console.error: (new TypeError("this._searchProviderInfo is null", "resource:///modules/SearchSERPTelemetry.sys.mjs", 638))
+console.error: ({})
+2023-06-23 18:13:02.377 plugin-container[68848:11599877] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 18:13:02.377 plugin-container[68848:11599877] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-06-23 18:13:02.380 plugin-container[68848:11599877] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 18:13:02.380 plugin-container[68848:11599877] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-06-23 18:13:02.380 plugin-container[68848:11599889] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 18:13:02.380 plugin-container[68848:11599889] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1687544083229	Marionette	INFO	Stopped listening on port 56870
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1687544090631	geckodriver	INFO	Listening on 127.0.0.1:56938
+1687544091246	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "56939" "--r ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/8x/mhb95z856c56z5sdrrfg40140000gp/T/rust_mozprofileV1hmWX"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1687544092631	Marionette	INFO	Marionette enabled
+1687544092725	Marionette	INFO	Listening on port 56946
+console.error: "Warning: unrecognized command line flag -remote-allow-hosts\n"
+2023-06-23 13:14:52.767 plugin-container[68877:11601297] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 13:14:52.767 plugin-container[68877:11601297] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-06-23 13:14:52.770 plugin-container[68877:11601297] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 13:14:52.770 plugin-container[68877:11601297] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-06-23 13:14:52.771 plugin-container[68877:11601298] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 13:14:52.771 plugin-container[68877:11601298] nil host used in call to allowsAnyHTTPSCertificateForHost:
+Read port: 56946
+WebDriver BiDi listening on ws://127.0.0.1:56939
+1687544093140	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:56939/devtools/browser/3bf2acff-526c-435f-a425-aa17cf1719f4
+console.error: ({})
+2023-06-23 18:14:58.139 plugin-container[68887:11601613] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 18:14:58.140 plugin-container[68887:11601613] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-06-23 18:14:58.143 plugin-container[68887:11601613] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 18:14:58.143 plugin-container[68887:11601613] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-06-23 18:14:58.143 plugin-container[68887:11601617] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-06-23 18:14:58.144 plugin-container[68887:11601617] nil host used in call to allowsAnyHTTPSCertificateForHost:
+console.error: ({})
+console.error: ({})

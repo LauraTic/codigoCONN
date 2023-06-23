@@ -15,7 +15,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 # Leer el archivo Excel
-df = pd.read_csv("/Users/datos-lc/Documents/Colecciones ongoing/Baja_california/lista_urls.csv")
+df = pd.read_csv("/Users/datos-lc/Documents/Colecciones ongoing/jalisco/url-jalisco.csv")
 
 # Obtener la columna de URLs
 columna_urls = df["URL"]
@@ -40,7 +40,12 @@ driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
 def enter_url(url):
     global contador, elementos_capturados, elementos_faltantes, driver
 
-    WebDriverWait(driver, 10).until(EC.url_to_be(url))
+    options = webdriver.ChromeOptions()
+    options.add_argument('--no-sandbox')
+    options.add_argument('--disable-dev-shm-usage')
+    driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
+   
+
     
     driver.get(url)
 
@@ -53,9 +58,7 @@ def enter_url(url):
         print("Analizando elemento", texto_descripcion)
         print(url)
        
-        imagen_elemento = WebDriverWait(driver, 10).until(
-            EC.visibility_of_element_located(
-            By.XPATH, '//img[@class="x85a59c x193iq5w x4fas0m x19kjcj4"]'))
+        imagen_elemento = driver.find_element(By.XPATH, '//img[@class="x85a59c x193iq5w x4fas0m x19kjcj4"]')
         
       
         url_imagen = imagen_elemento.get_attribute('src')
@@ -66,7 +69,7 @@ def enter_url(url):
         
         
         #urllib.request.urlretrieve(url_imagen, nombre_imagen)
-        urllib.request.urlretrieve(url_imagen, f'/Users/datos-lc/Documents/Colecciones ongoing/Baja_california/{nombre_imagen}.jpeg')
+        urllib.request.urlretrieve(url_imagen, f'/Users/datos-lc/Documents/Colecciones ongoing/jalisco/{nombre_imagen}.jpeg')
         
         
     except NoSuchElementException:
@@ -78,17 +81,36 @@ def enter_url(url):
         
         
 
-
+    driver.quit()
     return elementos_capturados, elementos_faltantes
     contador += 1
+    
+for i in range(len(urls)):
+   enter_url(urls[i])
+
+#screenshots = Parallel(n_jobs=-1, prefer="threads")(delayed(enter_url)(urls[url])  for url in range(len(urls)))
 
 
-screenshots = Parallel(n_jobs=-1)(delayed(enter_url)(url) for url in urls)
 
-df_screen = pd.DataFrame(screenshots)
-df_screen.to_csv('/Users/datos-lc/Documents/Colecciones ongoing/Baja_california/screen.csv', index=False)
 df_falt = pd.DataFrame(elementos_faltantes)
-df_falt.to_csv("/Users/datos-lc/Documents/Colecciones ongoing/Baja_california/faltantes.csv", index=False)
+df_falt.to_csv("/Users/datos-lc/Documents/Colecciones ongoing/jalisco/faltantes.csv", index=False)
+df_falt = pd.DataFrame(elementos_capturados)
+df_falt.to_csv("/Users/datos-lc/Documents/Colecciones ongoing/jalisco/capturados.csv", index=False)
+#screenshots = Parallel(n_jobs=-1)(delayed(enter_url)(urls[url]) for url in range(len(urls)))
+
+#print(screenshots)
+#df_capt = pd.DataFrame(screenshots)
+#df_capt.to_csv("capturados.csv", index=False)
+
+
+
+
+#df_screen = pd.DataFrame(screenshots)
+#df_screen.to_csv('/Users/datos-lc/Documents/Colecciones ongoing/Baja_california/screen.csv', index=False)
+#df_falt = pd.DataFrame(elementos_faltantes)
+#df_falt.to_csv("/Users/datos-lc/Documents/Colecciones ongoing/Baja_california/faltantes.csv", index=False)
+#df_falt = pd.DataFrame(elementos_capturados)
+#df_falt.to_csv("/Users/datos-lc/Documents/Colecciones ongoing/Baja_california/capturados.csv", index=False)
 
 
 

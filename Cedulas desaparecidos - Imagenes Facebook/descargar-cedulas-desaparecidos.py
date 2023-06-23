@@ -16,7 +16,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 ##########  Código para hacer scroll hasta abajo y guardar las URLS de las imágenes de las cédulas en Facebook #########
 # Configurar el navegador y cargar la página web
-pagina_web = 'https://www.facebook.com/bc.cebp/photos_by'
+pagina_web = 'https://www.facebook.com/BusquedaJal/photos'
 #driver = webdriver.Chrome(ChromeDriverManager().install())
 
 
@@ -38,7 +38,7 @@ elementos_capturados = []
 elementos_faltantes = []
 
 
-while scrolled < 3000:
+while scrolled < 12000:
     driver.execute_script(f"window.scrollTo(0, {scroll_actual});")
     time.sleep(0.5)
     scroll_actual += scroll_incremento
@@ -59,14 +59,19 @@ for elemento in elementos:
     urls.append(href)
 
 df_url = pd.DataFrame(urls, columns=['URL'])
-df_url.to_csv("/Users/datos-lc/Documents/Colecciones ongoing/Baja_california/lista_urls.csv", index=False)
+df_url.to_csv("/Users/datos-lc/Documents/Colecciones ongoing/jalisco/url-jalisco.csv", index=False)
 
-contador = 0
+"""contador = 0
 
 def enter_url(url):
     global contador, elementos_capturados, elementos_faltantes, driver
 
-    WebDriverWait(driver, 10).until(EC.url_to_be(url))
+    options = webdriver.ChromeOptions()
+    options.add_argument('--no-sandbox')
+    options.add_argument('--disable-dev-shm-usage')
+    driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
+   
+
     
     driver.get(url)
 
@@ -77,10 +82,9 @@ def enter_url(url):
         texto_descripcion = driver.find_element(By.XPATH, '//div[@class="xyinxu5 x4uap5 x1g2khh7 xkhd6sd"]').text
        
         print("Analizando elemento", texto_descripcion)
+        print(url)
        
-        imagen_elemento = WebDriverWait(driver, 10).until(
-            EC.visibility_of_element_located(
-            By.XPATH, '//img[@class="x85a59c x193iq5w x4fas0m x19kjcj4"]'))
+        imagen_elemento = driver.find_element(By.XPATH, '//img[@class="x85a59c x193iq5w x4fas0m x19kjcj4"]')
         
       
         url_imagen = imagen_elemento.get_attribute('src')
@@ -91,7 +95,7 @@ def enter_url(url):
         
         
         #urllib.request.urlretrieve(url_imagen, nombre_imagen)
-        urllib.request.urlretrieve(url_imagen, f'/Users/datos-lc/Documents/Colecciones ongoing/Baja_california/{nombre_imagen}.jpeg')
+        urllib.request.urlretrieve(url_imagen, f'/Users/datos-lc/Documents/Colecciones ongoing/jalisco/{nombre_imagen}.jpeg')
         
         
     except NoSuchElementException:
@@ -100,20 +104,23 @@ def enter_url(url):
         print("no lo pudimos encontrar", url)
         
         elementos_faltantes.append([nombre_imagen, url_imagen])
-        df_falt = pd.DataFrame(elementos_faltantes)
-        df_falt.to_csv("/Users/datos-lc/Documents/Colecciones ongoing/Baja_california/faltantes.csv", index=False)
+        
+        
 
 
     return elementos_capturados, elementos_faltantes
     contador += 1
 
 
-screenshots = Parallel(n_jobs=-1)(delayed(enter_url)(url) for url in urls)
+for i in range(len(urls)):
+   enter_url(urls[i])
 
-df_screen = pd.DataFrame(screenshots)
-df_screen.to_csv('/Users/datos-lc/Documents/Colecciones ongoing/Baja_california/screen.csv', index=False)
+df_falt = pd.DataFrame(elementos_faltantes)
+df_falt.to_csv("/Users/datos-lc/Documents/Colecciones ongoing/jalisco/faltantes.csv", index=False)
+df_falt = pd.DataFrame(elementos_capturados)
+df_falt.to_csv("/Users/datos-lc/Documents/Colecciones ongoing/jalisco/capturados.csv", index=False)
 
 
 
 
-
+"""
