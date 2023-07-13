@@ -32,10 +32,8 @@ time.sleep(3)
 # Desplazar la página gradualmente y capturar elementos
 scroll_incremento = 500  # Incremento de desplazamiento en píxeles
 scroll_actual = 500  # Posición de desplazamiento actual
-urls = []  # Lista para almacenar los detalles de cada elemento
+
 scrolled = 0 
-elementos_capturados = []
-elementos_faltantes = []
 
 
 while scrolled < 12000:

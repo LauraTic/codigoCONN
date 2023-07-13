@@ -11,9 +11,11 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from fpdf import FPDF
+from webdriver_manager.chrome import ChromeDriverManager
 
 pagina_web = 'https://directoriosancionados.apps.funcionpublica.gob.mx/#'
-driver = webdriver.Chrome()
+chrome_options = webdriver.ChromeOptions()
+driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
 driver.get(pagina_web)
 
 
@@ -69,7 +71,7 @@ for i in range(len(detalles)):
     df = pd.DataFrame({'Ficha técnica del infractor': lista_nombres, 'Datos': lista_contenidos})
     df = df.set_index('Ficha técnica del infractor')
     print(df)
-    df.to_excel(f'/Users/connectasimac/Documents/DATOS/CODIGO/codigoCONN/{nombre}-{expediente}-.xslx', index=True)
+    df.to_excel(f'/Users/datos-lc/Documents/Colecciones ongoing/Resoluciones de nombramiento/{nombre}-{expediente}-.xlsx', index=True)
 
         # Crear una clase personalizada basada en FPDF
     class PDF(FPDF):
@@ -91,12 +93,12 @@ for i in range(len(detalles)):
         for column in df.columns:
             pdf.set_font('Arial', '', font_size)
             content = str(row[column])
-            pdf.cell(cell_width, 10, content[:100], 1)  # Ajustar el contenido a la longitud de la celda
+            pdf.cell(cell_width, 10, content[:200], 1)  # Ajustar el contenido a la longitud de la celda
         pdf.ln()
 
     
     # Guardar el archivo PDF
-    pdf.output(f'/Users/connectasimac/Documents/DATOS/CODIGO/codigoCONN/{nombre}-{expediente}.pdf')
+    pdf.output(f'/Users/datos-lc/Documents/Colecciones ongoing/Resoluciones de nombramiento/{nombre}-{expediente}.pdf')
 
     print("Archivo PDF guardado exitosamente.")
 

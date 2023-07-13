@@ -7,6 +7,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import urllib.request
 from selenium.webdriver.common.action_chains import ActionChains
+from webdriver_manager.chrome import ChromeDriverManager
 
 
 # Función para hacer scroll hacia abajo de forma incremental
@@ -30,7 +31,8 @@ import urllib.request
 
 
 pagina_web = 'https://directoriosancionados.apps.funcionpublica.gob.mx/#'
-driver = webdriver.Chrome()
+chrome_options = webdriver.ChromeOptions()
+driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
 driver.get(pagina_web)
 
 

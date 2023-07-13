@@ -27,9 +27,9 @@ diccionario = {}
 driver.get("https://www.facebook.com/BusquedaJal/photos")
 time.sleep(5)
 
-for j in range(0,10):
+for j in range(0,350):
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-    time.sleep(10)
+    time.sleep(2)
 
 anchors = driver.find_elements(By.TAG_NAME, 'a')
 anchors = [a.get_attribute('href') for a in anchors]
